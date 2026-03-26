@@ -1,8 +1,8 @@
-const event = new Date(Date.UTC(2026, 2, 26, 3, 0, 0));
-const options = {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-};
+const date = new Date();
+const [month, day, year] = [
+  date.getMonth()+1,
+  date.getDate(),
+  date.getFullYear(),
+];
 
-console.log(event.toLocaleDateString(undefined, options));
+console.log(`${year}年${month}月${day}日`);
